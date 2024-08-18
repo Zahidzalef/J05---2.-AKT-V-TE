@@ -1,15 +1,12 @@
-package com.atilsamancioglu.multipleactivities;
+package com.zahidiyigokler.a07_diger_sayfalar;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-
-import com.zahidiyigokler.a07_diger_sayfalar.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
     String userName;
     EditText editText;
 
@@ -19,22 +16,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         editText = findViewById(R.id.editText);
-
         userName = "";
     }
-
     public void changeActivity(View view) {
-
         userName = editText.getText().toString();
-
         Intent intent = new Intent(MainActivity.this,Main2Activity.class);
-
         intent.putExtra("userInput",userName);
-
         startActivity(intent);
-
-
-
-
     }
 }
